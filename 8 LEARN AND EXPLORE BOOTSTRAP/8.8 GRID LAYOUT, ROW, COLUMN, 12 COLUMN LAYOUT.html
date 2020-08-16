@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Grid layout, row, column, 12 column layout</title>
+
+    <link rel="stylesheet" href="css/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+
+    <style>
+        #header {
+            background: orange;
+        }
+
+        #menu {
+            background-color: pink;
+            padding: 15px 0;
+        }
+
+        #menu ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        #menu ul li {
+            display: inline-block;
+        }
+
+        #content {
+            background-color;
+        }
+
+        #sidebar {
+            background-color: lightblue;
+        }
+
+        #footer {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="header">
+                <h1>Website Name</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Aout Us</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8" id="content">
+                <h2>
+                    Sub Heading
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, explicabo facere dolorum
+                    maiores aspernatur dolor nulla magnam numquam dolores quas sunt doloribus eos enim sint cumque
+                    laborum officia molestiae harum similique quae, eius culpa fugit consectetur natus. Perspiciatis
+                    minima ducimus at consequatur amet alias maxime provident error hic, quos, ad veritatis nostrum.
+                    Pariatur repellendus nesciunt ipsum? Officia sunt repellendus natus voluptates vitae impedit
+                    perferendis cum aut et fugit, nesciunt id maiores esse laudantium alias omnis, quaerat ad rem velit
+                    a optio assumenda veritatis facilis fugiat. Laborum nemo, ut dolores numquam est mollitia vero sunt
+                    perferendis, harum suscipit eos nam ipsum.
+                </p>
+            </div>
+
+            <div class="col-md-4" id="sidebar">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Aout Us</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" id="footer">
+                <p>@copyright 2020.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

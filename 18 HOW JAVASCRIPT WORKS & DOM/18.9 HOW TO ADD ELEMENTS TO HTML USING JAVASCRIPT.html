@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+
+    <style>
+        article {
+            border: 2px solid red;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .special h3 {}
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h3>Explore DOM</h3>
+            <article id="first-article">
+                <h3>article</h3>
+                <p class="author">autor-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit maiores a
+                    asperiores laboriosam obcaecati quod reiciendis! Sint inventore aliquam deserunt.</p>
+            </article>
+
+            <article class="special">
+                <h3>article</h3>
+                <p class="author">autor-2</p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit maiores a
+                    asperiores laboriosam obcaecati quod reiciendis! Sint inventore aliquam deserunt.</p>
+            </article>
+
+            <article class="special">
+                <h3>article</h3>
+                <p class="author">autor-3</p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit maiores a
+                    asperiores laboriosam obcaecati quod reiciendis! Sint inventore aliquam deserunt.</p>
+
+            </article>
+            <article>
+                <h3>Grocery List</h3>
+                <ul id="gift-list">
+                    <li>gift itme-1</li>
+                    <li>gift itme-2</li>
+                    <li>gift itme-3</li>
+                    <li>gift itme-4</li>
+                    <li>gift itme-5</li>
+                </ul>
+            </article>
+
+        </section>
+    </main>
+
+    <script>
+        const article = document.getElementById("first-article");
+        const newParagraph = document.createElement("p");
+        newParagraph.innerHTML = "This is added by JavaScript";
+        article.appendChild(newParagraph);
+
+        // add more gift item
+
+        const ul = document.getElementById("gift-list");
+        const li = document.createElement("li");
+        li.innerHTML = "Brand new Gift";
+        ul.appendChild(li);
+    </script>
+
+</body>
+
+</html>

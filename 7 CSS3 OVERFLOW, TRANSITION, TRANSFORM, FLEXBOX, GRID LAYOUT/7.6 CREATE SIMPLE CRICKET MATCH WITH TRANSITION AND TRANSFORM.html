@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE SIMPLE CRICKET MATCH WITH TRANSITION AND TRANSFORM</title>
+
+    <style>
+        .bat {
+            transition: transform .2s ease-in-out;
+            border: 1px solid red;
+        }
+
+        .ball {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: red;
+            position: relative;
+            left: 640px;
+
+            transition: transform 2s ease-in-out 0.3s;
+
+        }
+
+        .field:hover .ball {
+            transform: translate(100vh, -200px);
+        }
+
+        .bat:hover {
+            transform: rotate(-60deg);
+            transform-origin: 100% 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="field">
+        <img class="bat" src="images/bat.jpg" alt="">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+
+</html>

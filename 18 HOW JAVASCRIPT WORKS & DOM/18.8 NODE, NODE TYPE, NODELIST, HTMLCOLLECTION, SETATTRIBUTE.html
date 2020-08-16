@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+
+    <style>
+        article {
+            border: 2px solid red;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .special h3 {}
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h3>Explore DOM</h3>
+            <article>
+                <h3>article</h3>
+                <p class="author">autor-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit maiores a
+                    asperiores laboriosam obcaecati quod reiciendis! Sint inventore aliquam deserunt.</p>
+            </article>
+
+            <article class="special">
+                <h3>article</h3>
+                <p class="author">autor-2</p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit maiores a
+                    asperiores laboriosam obcaecati quod reiciendis! Sint inventore aliquam deserunt.</p>
+            </article>
+
+            <article class="special">
+                <h3>article</h3>
+                <p class="author">autor-3</p>
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit maiores a
+                    asperiores laboriosam obcaecati quod reiciendis! Sint inventore aliquam deserunt.</p>
+            </article>
+
+        </section>
+    </main>
+
+    <script>
+
+        var authors = document.querySelectorAll("special h3");
+        for (var i = 0; i < authors.length; i++) {
+            var element = authors[i];
+            element.style.backgroundColor = "lightblue";
+            element.style.margin = "10px";
+        }
+    </script>
+
+</body>
+
+</html>

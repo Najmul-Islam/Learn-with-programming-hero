@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1::before {
+            content: "Hello ";
+            color: blue;
+            font-size: 15px;
+            background-color: cornflowerblue;
+        }
+
+        h1::before:hover {
+            font-size: 20px;
+        }
+
+        body {
+            counter-reset: section;
+        }
+
+        p::before {
+            counter-increment: section;
+            content: "Hello "counter(section) ": ";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo Class</h1>
+    <h1>Normal Class</h1>
+    <h1>Hard Class</h1>
+
+    <input name="email" type="text">
+    <br>
+    <input type="password" type="name">
+    <a href="http://www.youtube.com">Youtube</a><a href="http://www.google.com">Google</a>
+    <ul>
+        <p>one</p>
+        <p>tow</p>
+        <p>three</p>
+        <p>four</p>
+        <p>five</p>
+        <p>six</p>
+        <p>seven</p>
+        <p>eight</p>
+        <p>nine</p>
+        <p>ten</p>
+    </ul>
+</body>
+
+</html>

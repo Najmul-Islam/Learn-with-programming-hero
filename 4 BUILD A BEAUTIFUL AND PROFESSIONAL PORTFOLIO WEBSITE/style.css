@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+p {
+  color: dimgray;
+}
+/* nav-bar section  */
+.min-nav {
+  height: 70px;
+  font-family: "Montserrat", sans-serif;
+  background: rgb(221, 218, 218);
+}
+.sub-nav {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.logo {
+  padding: 16px;
+}
+.logo a {
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 900;
+  color: black;
+}
+.logo-p1 {
+  font-weight: 200;
+}
+.logo-M {
+  display: none;
+}
+.nav-bar {
+}
+.nav-bar ul {
+  list-style-type: none;
+}
+.nav-bar ul a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+}
+.nav-bar ul a li {
+  color: black;
+}
+
+/* wellcome section */
+.orange-highlight {
+  color: orange;
+}
+.half-width {
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  padding-left: 2%;
+}
+.half-width img {
+  width: 80%;
+  margin-top: 30px;
+}
+.top-banner {
+  background-image: url(images/top-banner.png);
+  background-repeat: no-repeat;
+}
+section {
+  height: 400px;
+  padding-bottom: 150px;
+  margin-bottom: 100px;
+}
+.link-button {
+  text-decoration: none;
+  background-image: linear-gradient(45deg, lightSalmon, tomato);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+}
+
+/* link section */
+.dream-area {
+  background-image: url(images/dream-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+/* experience-area section */
+.single-exp {
+  box-shadow: 10px 10px 40px gray;
+  border-radius: 5px;
+  height: 80%;
+  background: white;
+}
+.experience-area {
+  background-image: url(images/exp-bg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#full-stack {
+  border-left: 7px solid;
+  border-image: linear-gradient(180deg, rgb(231, 164, 138), tomato);
+  border-image-slice: 1;
+}
+#baby-web {
+  border-left: 7px solid;
+  border-image: linear-gradient(180deg, blue, cyan);
+  border-image-slice: 1;
+}
+/* footer section */
+footer p {
+  text-align: center;
+}
+
+@media screen and (max-width: 426px) {
+  /* nav section  */
+  nav {
+    display: none;
+  }
+
+  /* heder font section  */
+
+  .half-width h1 {
+    font-size: 30px;
+  }
+  .half-width h2 {
+    font-size: 20px;
+  }
+  .half-width{
+      float: none;
+  }
+ 
+}

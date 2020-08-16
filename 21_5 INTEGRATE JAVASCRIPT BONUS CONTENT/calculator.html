@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<style>
+    .formstyle {
+        text-align: center;
+
+    }
+
+    .input {
+        width: 314px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    button {
+        width: 70px;
+        height: 70px;
+        margin: 5px;
+        font-size: 25px;
+
+    }
+
+    .equle {
+        width: 155px;
+        height: 70px;
+        font-size: 25px;
+
+    }
+</style>
+
+<body>
+    <div class="formstyle">
+        <form name="forms">
+            <input id="input" class="input" type="text"><br>
+
+            <button onclick="keyWord(7)" type="button">7</button>
+            <button onclick="keyWord(8)" type="button">8</button>
+            <button onclick="keyWord(9)" type="button">9</button>
+            <button onclick="keyWord('/')" type="button">/</button>
+            <br>
+            <button onclick="keyWord(4)" type="button">4</button>
+            <button onclick="keyWord(5)" type="button">5</button>
+            <button onclick="keyWord(6)" type="button">6</button>
+            <button onclick="keyWord('*')" type="button">*</button>
+            <br>
+            <button id="one" type="button">1</button>
+            <button onclick="keyWord(2)" type="button">2</button>
+            <button onclick="keyWord(3)" type="button">3</button>
+            <button onclick="keyWord('-')" type="button">-</button>
+            <br>
+            <button id="clear-all" type="button">C</button>
+            <button onclick="keyWord(0)" type="button">0</button>
+            <button id="equal" type="button">=</button>
+            <button id="plus" onclick="keyWord('+')" type="button">+</button>
+
+        </form>
+    </div>
+
+    <script>
+        let one = document.getElementById("one");
+        one.addEventListener("click", function () {
+            // let oneIn = document.getElementById("one").innerText;
+            // document.getElementById("input").value += oneIn;
+            keyWord(1);
+        })
+        function keyWord(value) {
+            document.getElementById("input").value += value;
+        }
+
+        //Clear propertey
+        let clearAll = document.getElementById("clear-all");
+        clearAll.addEventListener("click", function () {
+            let clearAll = document.getElementById("input").value = "";
+        })
+
+        let plus = document.getElementById("plus");
+        plus.addEventListener("click", function () {
+            //let firstValue = document.getElementById("input").value;
+            //let firstValueInt = parseFloat(firstValue);
+            let presentValue = firstValue();
+            document.getElementById("input").value = presentValue;
+        })
+
+        function firstValue() {
+            let firstValue = document.getElementById("input").value;
+            let firstValueInt = parseFloat(firstValue);
+
+            return firstValueInt;
+        }
+
+        let equal = document.getElementById("equal");
+        equal.addEventListener("click", function () {
+
+            let lastValue = document.getElementById("input").value + firstValue();
+            let totalValue = lastValue;
+
+            document.getElementById("input").value = totalValue;
+        })
+
+
+    </script>
+
+</body>
+
+</html>

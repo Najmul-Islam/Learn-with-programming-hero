@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.1 CSS POSITION MORE EXPLANATION RELATIVE ABSOLUTE</title>
+</head>
+
+<style>
+    .container {
+        display: flex;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border: 2px solid black;
+    }
+
+    .box-2 {
+        position: absolute;
+    }
+
+
+    .box-3 {
+        z-index: 5;
+    }
+</style>
+
+<body>
+    <h1>P0sition</h1>
+    <h3>More position</h3>
+    <section class="container">
+        <div class="box box-1">
+            <h3>box-1</h3>
+        </div>
+        <div class="box box-2">
+            <h3>box-2</h3>
+        </div>
+        <div class="box box-3">
+            <h3>box-3</h3>
+        </div>
+        <div class="box box-4">
+            <h3>box-4</h3>
+        </div>
+    </section>
+</body>
+
+</html>

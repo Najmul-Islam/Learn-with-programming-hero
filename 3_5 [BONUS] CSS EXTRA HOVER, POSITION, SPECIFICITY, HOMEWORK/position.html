@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            height: 100px;
+            padding: 40px;
+            background: gainsboro;
+            margin-bottom: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        
+        .container {
+            margin: 0 auto;
+            width: 800px;
+            height: 800px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        div {
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            font-size: 25px;
+            position: relative;
+
+        }
+
+        div:nth-child(2n) {
+            background-color: black;
+            color: gainsboro;
+        }
+
+        div:nth-child(2n+1) {
+            background-color: gainsboro;
+        }
+
+        .nine {
+            grid-row-start: 2;
+            grid-column-end: 9;
+        }
+
+        .townty-five {
+            grid-row-start: 4;
+            grid-column-end: 9;
+        }
+
+        .four {
+            grid-row-start: 6;
+            grid-column-end: 9;
+        }
+
+        .five {
+            grid-row-start: 8;
+            grid-column-end: 9;
+        }
+
+        .set-number {
+            padding-top: 70px;
+        }
+
+        .set-font {
+            text-align: start;
+            font-size: 25px;
+            margin-top: 35px;
+            font-weight: unset;
+        }
+
+        .set-font-a8 {
+            font-size: 25px;
+            font-weight: unset;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+           
+        }
+
+        .set-number-a8 {
+            font-size: 25px;
+            font-weight: unset;
+            position: absolute;
+            top: 0;
+            
+        }
+
+        .set-font-h1 {
+            text-align: start;
+            padding: 0px;
+            font-size: 25px;
+            font-weight: unset;
+            position: absolute;
+            top: 0;
+            
+        }
+
+        .set-number-h1 {
+            font-size: 25px;
+            position: absolute;
+            font-weight: unset;
+            right: 0;
+        }
+
+        .set-number-a1 {
+            font-size: 25px;
+            font-weight: unset;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .set-font-a1 {
+            font-size: 25px;
+            font-weight: unset;
+            position: absolute;
+            right: 0;
+        }
+
+        .set-number-h8 {
+            font-size: 25px;
+            font-weight: unset;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .set-font-h8 {
+            font-size: 25px;
+            font-weight: unset;
+            position: absolute;
+            bottom: 0;
+        }
+        .set-no-r{
+            text-align: end;
+            margin-top: 40px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <h1>Chess Bord</h1>
+    </section>
+    <section class="container">
+        <div>
+            <h1 class="set-number-a8">8</h1>
+            <h1 class="set-font-a8">A</h1>
+        </div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+        <div>G</div>
+        <div>
+            <h1 class="set-font-h8">H</h1>
+            <h1 class="set-number-h8">8</h1>
+        </div>
+        <div class="nine"><p class="set-no-r">7</p></div>
+        <div>
+            <h1 class="set-font">7</h1>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <h1 class="set-font">6</h1>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div> <p class="set-no-r">6</p> </div>
+        <div class="townty-five"><p class="set-no-r">5</p></div>
+        <div>
+            <h1 class="set-font">5</h1>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <h1 class="set-font">4</h1>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div> <p class="set-no-r">4</p></div>
+        <div class="four"><p class="set-no-r">3</p></div>
+        <div>
+            <h1 class="set-font">3</h1>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <h1 class="set-font">2</h1>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div><p class="set-no-r">2</p></div>
+        <div class="five set-number">
+            <h1 class="set-number-h1">1</h1>
+            <h1 class="set-font-h1">H</h1>
+        </div>
+
+        <div class="">
+            <h1 class="set-font-a1">A</h1>
+            <h1 class="set-number-a1">1</h1>
+        </div>
+        <div class="set-number">B</div>
+        <div class="set-number">C</div>
+        <div class="set-number">D</div>
+        <div class="set-number">E</div>
+        <div class="set-number">F</div>
+        <div class="set-number">G</div>
+
+    </section>
+</body>
+
+</html>

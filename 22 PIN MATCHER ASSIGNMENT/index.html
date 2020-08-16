@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="generate-input" class="form-control" type="text">
+                    <button id="generate-btn" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="num-input" class="form-control" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                                <div onclick="keyWord(7)" class="button">7</div>
+                                <div onclick="keyWord(8)" class="button">8</div>
+                                <div onclick="keyWord(9)" class="button">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div onclick="keyWord(4)" class="button">4</div>
+                                <div onclick="keyWord(5)" class="button">5</div>
+                                <div onclick="keyWord(6)" class="button">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div onclick="keyWord(1)" class="button">1</div>
+                                <div onclick="keyWord(2)" class="button">2</div>
+                                <div onclick="keyWord(3)" class="button">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div id="back-space" class="button"> &lt;</div>
+                                <div onclick="keyWord(0)" class="button">0</div>
+                                <div id="clear-all" class="button">C</div>
+                            </div>
+                            <div>
+                                <button id="submit" type="submit" class="submit-btn">Submit</button>
+                                <p id="try-note" class="action-left">3 try left</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notify-section">
+                <p id="pin-unmathch" class="notify">❌ Pin Didn't Match, Please try again</p>
+                <p id="pin-mathch" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            </div>
+        </div>
+
+        <script>
+            //Generate Pin Button
+
+            let generateBtn = document.getElementById("generate-btn");
+            generateBtn.addEventListener("click", function () {
+                let output = randomNum(1000, 9999);
+                document.getElementById("generate-input").value = output;
+
+                clearAllValue()
+            })
+            function randomNum(number1, number2) {
+                return Math.floor(Math.random() * (number2 - number1) + number1);
+            }
+
+            //Keybord Section
+            // const numOne = document.getElementById("one");
+            // numOne.addEventListener("click", function () {
+            //     const numOneValue = document.getElementById("one").innerText;
+            //     document.getElementById("inputNum").value += numOneValue;
+
+            //     keyWord(1);
+            // })
+
+            // Function for Number Plate 
+            function keyWord(value) {
+                document.getElementById("num-input").value += value;
+            }
+
+            // Clear Button
+
+            const clearAll = document.getElementById("clear-all");
+            clearAll.addEventListener("click", function () {
+                // const clearValueInput = document.getElementById("num-input").value = "";
+                // const clearMach = document.getElementById("pin-mathch");
+                // clearMach.style.display = "none";
+                // const clearUnmach = document.getElementById("pin-unmathch");
+                // clearUnmach.style.display = "none"
+
+                clearAllValue();
+            })
+
+            function clearAllValue() {
+                const clearValueInput = document.getElementById("num-input").value = "";
+                const clearMach = document.getElementById("pin-mathch");
+                clearMach.style.display = "none";
+                const clearUnmach = document.getElementById("pin-unmathch");
+                clearUnmach.style.display = "none"
+            }
+
+            // Submit Button
+
+            const submitBtn = document.getElementById("submit");
+            submitBtn.addEventListener("click", function () {
+                const generateInput = document.getElementById("generate-input").value;
+                const numInput = document.getElementById("num-input").value;
+
+                if (generateInput == numInput) {
+                    const pinMathch = document.getElementById("pin-mathch");
+                    pinMathch.style.display = "block";
+                }
+                else {
+                    const pinUnmathch = document.getElementById("pin-unmathch");
+                    pinUnmathch.style.display = "block";
+                    const tryNote = document.getElementById("try-note");
+                    tryNote.style.display = "block";
+
+                }
+            })
+
+            // Backspace Button
+
+            const BackSpace = document.getElementById("back-space");
+            BackSpace.addEventListener("click", function () {
+                const value = document.getElementById("num-input").value;
+                document.getElementById("num-input").value = value.substr(0, value.length - 1);
+
+                const clearMach = document.getElementById("pin-mathch");
+                clearMach.style.display = "none";
+                const clearUnmach = document.getElementById("pin-unmathch");
+                clearUnmach.style.display = "none"
+            })
+
+        </script>
+</body>
+
+</html>
